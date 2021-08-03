@@ -1,0 +1,6 @@
+.history
+.next
+node_modules
+.git
+.gitignore
+README.md
