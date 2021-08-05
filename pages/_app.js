@@ -3,6 +3,8 @@ import Head from 'next/head';
 import React from 'react';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import NavbarLayout from '../src/layout/Navbar';
+import 'react-big-calendar/lib/css/react-big-calendar.css';
+import '../styles.css';
 
 export default function App({ Component, pageProps }) {
   return (

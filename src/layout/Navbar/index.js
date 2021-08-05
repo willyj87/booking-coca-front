@@ -4,7 +4,7 @@ import { Container, Nav, Navbar, NavDropdown, Button } from 'react-bootstrap';
 
 const NavbarLayout = () => {
   const { user } = useUser();
-
+  console.log('user', user);
   return (
     <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
       <Container>
@@ -14,7 +14,7 @@ const NavbarLayout = () => {
           <Nav.Link href="#features">My Bookings</Nav.Link>
         </Nav>
         {user && (
-          <NavDropdown title={user.nickname} id="collasible-nav-dropdown">
+          <NavDropdown title={`${user.nickname} ${user.given_name}`} id="collasible-nav-dropdown">
             <NavDropdown.Item href="#action/3.1">My Account</NavDropdown.Item>
             <NavDropdown.Item href="/api/auth/logout">Disconnect</NavDropdown.Item>
           </NavDropdown>

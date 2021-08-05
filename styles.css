@@ -1,0 +1,10 @@
+body {
+    background-color: #f7feff;
+}
+
+.sub-container {
+    margin-top: 1em;
+}
+.sub-container .rbc-btn-group {
+    display: none;
+}

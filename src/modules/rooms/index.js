@@ -1,13 +1,12 @@
 import React from 'react';
-import { Row } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import RoomCard from './Card';
-import ContainerStyled from './ContainerStyled';
 
 const Rooms = ({ rooms }) => {
   return (
-    <ContainerStyled>
+    <Container className="sub-container">
       <Row>{rooms && rooms.map((room, key) => <RoomCard room={room} index={key} />)}</Row>
-    </ContainerStyled>
+    </Container>
   );
 };
 export default Rooms;
