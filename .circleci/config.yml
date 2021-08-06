@@ -41,7 +41,7 @@ workflows:
           account-url: AWS_ECR_ACCOUNT_URL
           region: AWS_DEFAULT_REGION
           repo: '${FRONT_PREFIX}'
-          tag: '${CIRCLE_TAG}'
+          tag: 'latest'
         
       # - aws-ecs/deploy-service-update:
       #     cluster-name: 'arn:aws:ecs:eu-west-3:998243642477:cluster/ibegman-dev'
