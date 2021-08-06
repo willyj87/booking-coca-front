@@ -5,7 +5,10 @@ import RoomCard from './Card';
 const Rooms = ({ rooms }) => {
   return (
     <Container className="sub-container">
-      <Row>{rooms && rooms.map((room, key) => <RoomCard room={room} index={key} />)}</Row>
+      <Row>
+        {rooms &&
+          rooms.map((room, key) => <RoomCard room={room} index={key} link={`/room/${room.id}`} />)}
+      </Row>
     </Container>
   );
 };

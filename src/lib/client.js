@@ -1,9 +1,14 @@
-import axios from "axios";
+import axios from 'axios';
+import getConfig from 'next/config';
 
-const client = (options = {}) => {
-    return axios.create({
-        baseURL: process.env.API_ENDPOINT
-    })
-}
+const { publicRuntimeConfig } = getConfig();
+const client = () => {
+  return axios.create({
+    baseURL: publicRuntimeConfig.apiEndpoint,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
+  });
+};
 
 export default client();
