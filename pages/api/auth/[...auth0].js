@@ -1,7 +1,7 @@
 import { handleAuth, handleCallback, handleLogin } from '@auth0/nextjs-auth0';
 import client from '../../../src/lib/client';
 
-const updateUser = async (req, res, sessions, state) => {
+const updateUser = async (req, res, sessions) => {
   const userBooker = await client
     .get('/bookers/find/byUser', {
       headers: {
